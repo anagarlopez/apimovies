@@ -33,4 +33,5 @@ build/
 .vscode/
 
 ### Appication Properties ###
-/src/main/resources/Appication.Properties
+/src/main/resources/appication.properties
+

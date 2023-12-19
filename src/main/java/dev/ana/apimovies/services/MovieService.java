@@ -1,17 +1,18 @@
-package services;
+package dev.ana.apimovies.services;
 
-import org.hibernate.mapping.List;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
+import dev.ana.apimovies.models.Movie;
 import dev.ana.apimovies.repositories.MovieRepository;
-import.dev.ana.apimovies.
 
 @Service
 public class MovieService {
 
     MovieRepository repository;
 
-    public MovieRepository(MovieRepository repository) {
+    public MovieService(MovieRepository repository) {
         this.repository = repository;
     }
     
@@ -20,7 +21,4 @@ public class MovieService {
         return movies;
     }
 
-    public Movie getById(Long id) throws Exception {
-        Movie movie = repository.findById(id).orElseThrow(()) -> new MovieNotFoundExcepcion
-    }
 }
