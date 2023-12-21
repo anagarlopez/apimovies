@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,6 +19,11 @@ public class Movie {
     private String title;
     private String description;
     private Long running_time;
+
+    @ManyToOne 
+    @JoinColumn (name = "year_id", nullable = true)
+
+    private Year creation_year;
 
     public Movie() {
     }
@@ -57,6 +64,14 @@ public class Movie {
 
     public void setRunning_time(Long running_time) {
         this.running_time = running_time;
+    }
+
+    public Year getCreation_year() {
+        return creation_year;
+    }
+
+    public void setCreation_year(Year creation_year) {
+        this.creation_year = creation_year;
     }
 
     
